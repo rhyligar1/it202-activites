@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>New York Times</title>
+  </head>
+  <body>
+    <script>
+      let apiEndPt = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Chicago&api-key=djvxNzDbvoBabcsYWwdsP5xnM4tJUys3';
+      
+      // make an http request; fetch returns a Promise
+      fetch(apiEndPt)
+      // handle the fulfillment
+      .then((response) => {return response.json()});
+      // handle the fulfillment
+      .then((myJson) => {console.log(myJson)
+       
+        // loop the JSON (in this case, an array of objects)
+        for (let record of myJson) {
+          // create a paragraph element
+          let paragraph = document.createElement("p");
+        
+          // set the paragraph text to the name property
+          paragraph.textContent = record["name"]
+
+          // append to the body element
+          document.body.appendChild(paragraph);
+        }
+
+      });
+      </script>
+  </body>
+</html>

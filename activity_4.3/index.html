@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script>
+      let url = 'https://data.cityofchicago.org/resource/xzkq-xp2w.json';
+      
+      // make an http request; fetch returns a Promise
+      fetch(url)
+      // handle the fulfillment
+      .then((response) => { 
+        // get the JSON from the response;  returns another Promise
+        return response.json();
+      })
+      // handle the fulfillment
+      .then((myJson) => {
+        console.log(myJson);
+        
+        // loop the JSON (in this case, an array of objects)
+        for (let record of myJson) {
+          // create a paragraph element
+          let p = document.createElement("p");
+        
+          // set the paragraph text to the name property
+          p.textContent = record["name"]
+
+          // append to the body element
+          document.body.appendChild(p);
+        }
+
+      });
+
+      </script>
+  </body>
+</html>

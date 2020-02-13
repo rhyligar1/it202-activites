@@ -1,0 +1,105 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+.slider {
+    height: 500px;
+    width: 100%;
+    background-color: grey;
+    overflow: hidden;
+    }
+
+.sliderchild {
+    height: 500px;
+    width: 500%;
+    background-color: green;
+    animation: slider infinite 20s 3s;
+}
+
+.imagecon{
+    height: 500px;
+    width: 20%;
+    background-color: grey;
+    float: left;
+   
+    /*Text Editting*/ 
+    line-height: 900px;
+    text-align: right;
+    font-size: 40px;
+    color: black;
+    font-family: arial;
+    padding: 0px 15px 0px 0px;
+}
+
+.imagecon:nth-child(1){
+    background-image: url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/sHdjUvtoizvfuG3z8jkqZY_1024_80.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagecon:nth-child(2){
+    background-image: url('https://zdnet3.cbsistatic.com/hub/i/r/2019/04/26/525e7f41-6905-4d4b-a763-f97c6a038386/thumbnail/770x433/a7f60ece6f33756983017fc7ff347004/huawei-p30-pro-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagecon:nth-child(3){
+    background-image: url('https://phandroid.s3.amazonaws.com/wp-content/uploads/2017/05/HTC-U11-Ocean-Ice-White.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagecon:nth-child(4){
+    background-image: url('https://cdn.androidheadlines.com/wp-content/uploads/2019/01/Motorola-Razr-2019-concept-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagecon:nth-child(5){
+    background-image: url('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/sHdjUvtoizvfuG3z8jkqZY_1024_80.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes slider {
+    12.5% {
+        margin-left: -100%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    37.5% {
+        margin-left: -200%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    62.5% {
+        margin-left: -300%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    87.5% {
+        margin-left: -400%;
+    }
+    100% {
+        margin-left: -400%
+    }
+}
