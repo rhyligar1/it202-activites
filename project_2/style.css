@@ -20,7 +20,15 @@
 
 #mainNav {
     background-color: grey;
-    float: left;
+    height: 50px;
+}
+
+.nav-Item {
+    float: right;
+}
+
+#comingSoon {
+    background-color: #f8f9fa!important
 }
 
 .slider {
@@ -50,6 +58,10 @@
     color: black;
     font-family: arial;
     padding: 0px 15px 0px 0px;
+}
+
+#comingSoon {
+    background-color: grey;
 }
 
 .imagecon:nth-child(1){
