@@ -28,7 +28,7 @@
 }
 
 #comingSoon {
-    background-color: #f8f9fa!important
+    background-color: #ffffff!important
 }
 
 .slider {
@@ -61,7 +61,17 @@
 }
 
 #comingSoon {
-    background-color: grey;
+    background-color: #f8f9fa!important;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 0px 0px 0px 0px;
+    height: 86px;
+    width: 200px;
 }
 
 .imagecon:nth-child(1){
