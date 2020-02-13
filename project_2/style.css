@@ -18,6 +18,11 @@
     position: absolute;
 }
 
+#mainNav {
+    background-color: grey;
+    float: left;
+}
+
 .slider {
     height: 500px;
     width: 100%;
@@ -54,7 +59,7 @@
 }
 
 .imagecon:nth-child(2){
-    background-image: url('https://zdnet3.cbsistatic.com/hub/i/r/2019/04/26/525e7f41-6905-4d4b-a763-f97c6a038386/thumbnail/770x433/a7f60ece6f33756983017fc7ff347004/huawei-p30-pro-header.jpg');
+    background-image: url('https://assets.pcmag.com/media/images/527386-apple-ipad-pro.jpg?width=810&height=456');
     background-repeat: no-repeat;
     background-size: cover;
 }
