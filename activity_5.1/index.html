@@ -8,17 +8,9 @@
   </head>
   <body>
     <script>
-      let url = 'https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l';
-      fetch(url)
-      .then((response) => {return response.json()})
-      .then((json) => {console.log(json)}
-
-        for (let recordofjson) {
-          let p = document.createElement("p");
-        
-          p.textContent = record["name"]
-
-          document.body.appendChild(p);}
+      fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
+      .then(response => response.json())
+      .then(data => console.log(data))
       </script>
   </body>
 </html>
