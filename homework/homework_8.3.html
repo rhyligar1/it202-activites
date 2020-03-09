@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping List Homework</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #808080;
+        }
+    </style>
+</head>
+
+<!-- Main Body -->
+
+<body>
+    <h1>Shopping List</h1>
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+    <ul></ul>
+
+    <!-- Script & Closing Tags -->
+    <script>
+        const list = document.querySelector('ul');
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        button.onclick = function() {
+            let myItem = input.value;
+            input.value = '';
+            const listItem = document.createElement('li');
+            const listText = document.createElement('span');
+            const listBtn = document.createElement('button');
+            listItem.appendChild(listText);
+            listText.textContent = myItem;
+            listItem.appendChild(listBtn);
+            listBtn.textContent = 'Delete Item';
+            list.appendChild(listItem);
+            listBtn.onclick = function(e) {
+                list.removeChild(listItem);
+            }
+            input.focus();
+        }
+    </script>
+</body>
+
+</html>
