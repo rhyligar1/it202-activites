@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<head>
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<button class="mdc-button foo-button" id="graf">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Graffiti Removal Request</span>
+</button>
+
+<button class="mdc-button foo-button" id="sfd">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Street Light Out Complaint</span>
+</button>
+
+<button class="mdc-button foo-button" id="csf">
+    <div class="mdc-button__ripple"></div>
+    <span class="mdc-button__label">Consumer Fraud Complaint</span>
+</button>
+
+<script>
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('foo-button'));
+    mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('header.mdc-top-app-bar'));
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('mdc-drawer'));
+    document.querySelector('mdc-top-app-bar__navigation-icon').addEventListener('click', (e) = > {
+        drawer.open = true;
+    });
+</script>
