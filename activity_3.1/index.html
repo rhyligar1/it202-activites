@@ -13,12 +13,24 @@
   <style>
       .container{
           background-color: rgb(213,0,50);
+          width: 100vw;
       }
       .container-fluid{
           background-color: rgb(0,30,98);
+          max-width: 100%;
       }
       .text-white{
           font color: rgb(255,255,255);
+      }
+      .left{
+          text-align: left;
+          text-justify: inter-word;
+      }
+      .right{
+          text-align: right;
+      }
+      .center{
+          
       }
   </style>
   </head>
@@ -27,21 +39,19 @@
     <h1>Activity 3.1</h1>
       
     <div class="container text-white">
-      <p> fixed width </p>
+      <p> Flexible width </p>
     </div>
       
     <div class="container-fluid text-white">
-      <p> flexible width </p>
+      <p> Fixed width </p>
     </div>
       
-    <div class="container">
-      <div class="row">
-          <div class="column">column 1</div>
-          <div class="column">column 2</div>
-          <div class="column">column 3</div>
-          <div class="column">column 4</div>
+      <div class="left">
+          <div>column1</div>
       </div>
-    </div>
+      <div class="right">
+          <p>column4</p>
+      </div>
       
       
       

@@ -1,16 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Activity 5.1</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+</head>
+
+<body>
+    <button id="getTitle">Title</button>
+    <button id="getExplanation">Explanation</button>
+    <button id="getDate">Date</button>
+ <h3> Open Console to see data.</h3>
     <script>
+        document.getElementById('getTitle').addEventListener('click', getTitle);
+        document.getElementById('getExplanation').addEventListener('click', getExplanation);
+        document.getElementById('getDate').addEventListener('click', getDate);
+
+         function getTitle() {
+            fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
+              .then((response) => {
+                return response.json()
+            }).then(function(data){
+                let title = data.title;
+                console.log(title);
+                    });
+         }
+         function getExplanation() {
+            fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
+              .then((response) => {
+                return response.json()
+            }).then(function(data){
+                let explanation = data.explanation;
+                console.log(explanation);
+                    });
+         }
+         function getDate() {
+            fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
+              .then((response) => {
+                return response.json()
+            }).then(function(data){
+                let date = data.date;
+                console.log(date);
+                    });
+         }
+       
+        
+        /*
+         function getNASAData() {
+            fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
+              .then((response) => {
+                return response.json();
+            }).then(function(data){
+                let title = data.title;
+                console.log(title);
+            })
+            .then(function(data){
+                let explaination = data.explaination;
+                console.log(explaination);
+            })
+            .then(function(data){
+                let date = data.date;
+                console.log(date);
+            })
+            .catch(error=> {console.error(error)});
+        }
+             */
+        
+        /* 
+         * Working Arrow Syntax
+         function getText(){
+            fetch('sample.txt')
+            .then((res) => res.text())
+            .then((data) => console.log(data))
+        }
+        
+        */
+        
+        /* 
+         * Working fetch without arrow syntax
+        function getText(){
+           fetch('sample.txt')
+               .then(function(res){
+               return res.text();
+           })
+           .then(function(data){
+                 console.log(data);
+             })
+       }
+       */
+        
+        /*
       fetch('https://api.nasa.gov/planetary/apod?api_key=YgPzguhtjlwVMUjVjaz2Fnzy1uzQAITqIJ83Ia6l')
       .then(response => response.json())
       .then(data => console.log(data))
-      </script>
-  </body>
+      */
+        
+    </script>
+   
+</body>
+
 </html>
